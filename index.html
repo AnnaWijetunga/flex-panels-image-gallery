@@ -145,6 +145,7 @@
         // trigger css open
         // when finishes, second one fires
         // toggles open Active
+        // Safari relies upon flex while other browsers used flex-grow - we have to account for both - thus we use "includes" vs ===
         if(e.propertyName.includes('flex')) {
             this.classList.toggle('open-active');
         }
