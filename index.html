@@ -132,7 +132,7 @@
 
   <script>
     // grab all panels, using querySelectorAll to ensure it's an array
-     const panels = document.querySelectorAll('.panels');
+     const panels = document.querySelectorAll('.panel');
      
      function toggleOpen() {
          this.classList.toggle('open');
@@ -140,6 +140,9 @@
 
     //  ensure each panel has an event listener
      panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+    //  now listen for the transition end to activate toggleActive
+     panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+
   </script>
 
 
