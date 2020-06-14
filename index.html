@@ -138,6 +138,18 @@
          this.classList.toggle('open');
      }
 
+     function toggleActive(e) {
+        //  two things are increasing in size here
+        //  listening for a click on each panel
+        // open it
+        // trigger css open
+        // when finishes, second one fires
+        // toggles open Active
+        if(e.propertyName.includes('flex')) {
+            this.classList.toggle('open-active');
+        }
+     }
+
     //  ensure each panel has an event listener
      panels.forEach(panel => panel.addEventListener('click', toggleOpen));
     //  now listen for the transition end to activate toggleActive
