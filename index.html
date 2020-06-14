@@ -131,11 +131,15 @@
   </div>
 
   <script>
-    // grab all panels, useing querySelectorAll to ensure it's an array
+    // grab all panels, using querySelectorAll to ensure it's an array
      const panels = document.querySelectorAll('.panels');
      
+     function toggleOpen() {
+         this.classList.toggle('open');
+     }
 
-
+    //  ensure each panel has an event listener
+     panels.forEach(panel => panel.addEventListener('click', toggleOpen));
   </script>
 
 
