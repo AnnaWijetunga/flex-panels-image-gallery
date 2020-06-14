@@ -73,8 +73,12 @@
 
     /* puts first word off screen initially */
     .panel > *:first-child { transform: translateY(-100%); }
+    /* adds first word to the page again */
+    .panel.open-active > *:first-child { transform: translateY(0); }
     /* puts last word off screen initially */
     .panel > *:last-child { transform: translateY(100%); }
+    /* adds last word to the page again */
+    .panel.open-active > *:last-child { transform: translateY(0); }
 
     .panel p {
       text-transform: uppercase;
